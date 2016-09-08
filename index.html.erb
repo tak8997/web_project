@@ -52,7 +52,7 @@
     <!-- Wrapper for slides -->
     <div id="main-banner" class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="/assets/main_banner01.png" alt="Image">
+        <img src="/assets/main_banner01.png" alt="Image" class="img-responsive center-block" style="margin: 0 auto">
       <!--<div class="carousel-caption">
             <h3>Sell $</h3>
             <p>Money Money.</p>
@@ -64,16 +64,11 @@
   
 <nav id="menu-nav" class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
     <div class="collapse navbar-collapse" id="menuNavbar">
       <ul id="menu-nav-menu" class="nav navbar-nav">
-        <li><a href="#">예약 안내</a></li>
+        <li>
+          <a href="#">예약 안내</a>
+        </li>
         <li><a href="#">관람 안내</a></li>
         <li><a href="#">자원봉사</a></li>
         <li><a href="#">사이버전시관</a></li>
@@ -84,26 +79,51 @@
   </div>
 </nav>
 
-<div class="container text-center">
+<div id="main-content" class="container text-center">
   <div class="row">
     <div class="col-sm-4">
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Current Project</p>
-    </div>
-    <div class="col-sm-4">
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-      <div class="well">
-       <p>Some text..</p>
+      <img id="sub-banner" src="/assets/popupzone.png" class="img-responsive" style="width:100%" alt="Image">
+      <div id="sub-info1">
+        
       </div>
     </div>
     <div class="col-sm-4">
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <div class="well">
+        <div class='tabbable'>
+          <ul class='nav nav-tabs' id='tab'>
+            <li class='active'>
+              <a data-toggle='tab' href='#tab-content-1'>Tab 1</a>
+            </li>
+            <li>
+              <a data-toggle='tab' href='#tab-content-2'>Tab 2</a>
+            </li>
+            <li>
+              <a data-toggle='tab' href='#tab-content-3'>Tab 3</a>
+            </li>
+          </ul>
+          <div class='tab-content' id='tab-content'>
+            <div class='tab-pane fade in active' id='tab-content-1'>
+              <p class='no-mg-b'>Lorem ipsum dolor sit amet, instructior conclusionemque pri an, reque principes euripidis in pri. Id postea periculis mel. Nam at dicta voluptatum, movet mundi commune ea eam, vim te repudiare inciderint vituperatoribus. Ex modo mucius volutpat quo, eos erat voluptua at, ad.</p>
+            </div>
+            <div class='tab-pane fade' id='tab-content-2'>
+              <p class='no-mg-b'>Causae perpetua partiendo id vis, eu accusamus disputando pri, dolore prodesset in his. Cetero feugait atomorum mel te, ut mel dolore eleifend. Eu ius utroque deleniti lobortis, quo ea facete virtute consequat. Vix ad tale splendide, id quem dolorem delicata sea sea.</p>
+            </div>
+            <div class='tab-pane fade' id='tab-content-3'>
+              <p class='no-mg-b'>Eu magna mazim omnesque est, ignota lucilius ullamcorper ex usu. Cu sit altera vituperata, no sint conclusionemque has, altera nostro voluptatibus mei in. Nibh dicam ius ad, nusquam deleniti nominati ei quo. At eos prompta sententiae theophrastus, has ex dicant intellegat adipiscing.</p>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <img src="/assets/calendar.png" style="width:100%" alt="Image">
       <p>Project 2</p>
     </div>
   </div>
 </div><br>
+
+
+
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
