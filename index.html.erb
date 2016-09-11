@@ -49,10 +49,16 @@
 
 <div id="main-banner-nav" class="container-fluid">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
     <!-- Wrapper for slides -->
-    <div id="main-banner" class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="/assets/main_banner01.png" alt="Image" class="img-responsive center-block" style="margin: 0 auto">
+    <div id="main-banner">
+      <div>
+        <img src="/assets/main_banner01.png" alt="Image" class="img-responsive">
       <!--<div class="carousel-caption">
             <h3>Sell $</h3>
             <p>Money Money.</p>
@@ -62,96 +68,128 @@
   </div>
 </div>
  
-<!-- <div id="quick-nav-items">
-  <div class="container">
+<div id="menu-nav">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 quick-link-item even">
-        <a href="/gnsm_web/?sub_num=183" class="quick-link link2">
-          이용 약관<br>
+        <a href="#" class="quick-link link2">
+          <img src="/assets/icon_01.png" />
+          <div>
+            <p>예약 안내</p>   
+            <h1>Reservation Guide</h1>                 
+          </div>
         </a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 quick-link-item">
-        <a href="/gnsm_web/?sub_num=265" class="quick-link link1">
-          개인번호 취금방침<br>
+        <a href="#" class="quick-link link1">
+          <img src="/assets/icon_02.png" />
+          <div>
+            <p>관람 안내</p>  
+            <h1>Exhibition Guide</h1>
+          </div>      
         </a>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 quick-link-item even  ">
-        <a href="http://cyber.scientorium.go.kr/museum_renewal/index.jsp" target="_blank" class="quick-link link4">
-          이메일 부단수신거부<br>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 quick-link-item even">
+        <a href="#" class="quick-link link4">
+          <img src="/assets/icon_03.png" />
+          <div>
+            <p>자원봉사</p>  
+            <h1>Volunteer work</h1>
+          </div> 
         </a>
       </div>
       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 quick-link-item">
-        <a href="/gnsm_web/?sub_num=214" class="quick-link link5">
-          운영자에게<br>
+        <a href="#" class="quick-link">
+          <img src="/assets/icon_04.png" />
+          <div>
+            <p>사이버전시관&nbsp;&nbsp;</p>  
+            <h1>Cyber Exhibition Hall</h1>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 quick-link-item">
+        <a href="#" class="quick-link link4">
+          <img src="/assets/icon_05.png" />
+          <div>
+            <p>찾아오시는 길</p>  
+            <h1>Location</h1>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2 quick-link-item">
+        <a href="#" class="quick-link link5">
+          <img src="/assets/icon_06.png" />
+          <div>
+            <p>자주 묻는 질문</p>  
+            <h1>Operation Guide</h1>
+          </div>  
         </a>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
-<nav id="menu-nav" class="navbar navbar-inverse">
+<!-- <nav id="menu-nav" class="navbar navbar-default">
   <div class="container-fluid">
-    <div id="menuNavbar" class="collapse navbar-collapse">
-      <ul id="menu-nav-menu" class="nav navbar-nav">
-        <li>
-          <a href="#">
-            <img src="/assets/icon_01.png" />
-            <div>
-              <p>예약 안내</p>   
-              <h1>Reservation Guide</h1>                 
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/assets/icon_02.png" />
-            <div>
-              <p>관람 안내</p>  
-              <h1>Exhibition Guide</h1>
-            </div>            
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/assets/icon_03.png" />
-            <div>
-              <p>자원봉사</p>  
-              <h1>Volunteer work</h1>
-            </div> 
-          </a>
-        </li>
-        <li>          
-          <a href="#">
-            <img src="/assets/icon_04.png" />
-            <div>
-              <p>사이버전시관</p>  
-              <h1>Cyber Exhibition Hall</h1>
-            </div> 
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/assets/icon_05.png" />
-            <div>
-              <p>찾아오시는 길</p>  
-              <h1>Location</h1>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="/assets/icon_06.png" />
-            <div>
-              <p>자주 묻는 질문</p>  
-              <h1>Operation Guide</h1>
-            </div>             
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ul id="menu-nav-menu" class="nav navbar-nav">
+      <li>
+        <a href="#">
+          <img src="/assets/icon_01.png" />
+          <div>
+            <p>예약 안내</p>   
+            <h1>Reservation Guide</h1>                 
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/assets/icon_02.png" />
+          <div>
+            <p>관람 안내</p>  
+            <h1>Exhibition Guide</h1>
+          </div>            
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/assets/icon_03.png" />
+          <div>
+            <p>자원봉사</p>  
+            <h1>Volunteer work</h1>
+          </div> 
+        </a>
+      </li>
+      <li>          
+        <a href="#">
+          <img src="/assets/icon_04.png" />
+          <div>
+            <p>사이버전시관</p>  
+            <h1>Cyber Exhibition Hall</h1>
+          </div> 
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/assets/icon_05.png" />
+          <div>
+            <p>찾아오시는 길</p>  
+            <h1>Location</h1>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="/assets/icon_06.png" />
+          <div>
+            <p>자주 묻는 질문</p>  
+            <h1>Operation Guide</h1>
+          </div>             
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
-
+ -->
 <div id="main-content" class="container text-center">
   <div class="row">
     <div id="main-con">
@@ -213,13 +251,13 @@
       <div class='tabbable'>
         <ul class='nav nav-tabs' id='tab'>
           <li class='active'>
-            <a data-toggle='tab' href='#tab-content-1'>Tab 1</a>
+            <a data-toggle='tab' href='#tab-content-1'>이달의 전시물</a>
           </li>
           <li>
-            <a data-toggle='tab' href='#tab-content-2'>Tab 2</a>
+            <a data-toggle='tab' href='#tab-content-2'>진행중인 행사</a>
           </li>
           <li>
-            <a data-toggle='tab' href='#tab-content-3'>Tab 3</a>
+            <a data-toggle='tab' href='#tab-content-3'>프로그램 소개 영상</a>
           </li>
         </ul>
       </div>
@@ -228,13 +266,13 @@
       <div class='tabbable'>
         <ul class='nav nav-tabs'>
           <li class='active'>
-            <a data-toggle='tab' href='#tab-content-1'>Tab 1</a>
+            <a data-toggle='tab' href='#tab-content-1'><img src="/assets/facebooklogo.png"></a>
           </li>
           <li>
-            <a data-toggle='tab' href='#tab-content-2'>Tab 2</a>
+            <a data-toggle='tab' href='#tab-content-2'><img src="/assets/twitterlogo.jpg"></a>
           </li>
           <li>
-            <a data-toggle='tab' href='#tab-content-3'>Tab 3</a>
+            <a data-toggle='tab' href='#tab-content-3'>Blog</a>
           </li>
         </ul>
       </div>
