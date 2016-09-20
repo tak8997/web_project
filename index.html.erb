@@ -1,18 +1,23 @@
 <!-- 
   아무 정보 없는 이미지는 background이미지로, 정보 전달의 이미지는 alt 도 꼭 써줌 
   word-break
+  부모에 값을 줘서 정렬
+  cursor:pointer
+  loadash
+  세부적인 것 레이아웃 잘 구성하기기 
+  float -> 다른 곳에서 침범 가능
 -->
 <nav id="main-nav" class="navbar navbar-inverse">
   <div class="container-fluid">
-    <div class="navbar-header" id="imgNavbar">
+    <div id="imgNavbar"class="navbar-header">
       
       <a class="navbar-brand" href="#"><img src="/assets/logo_kr.png" class="img-responsive pull-left"></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div id="myNavbar" class="collapse navbar-collapse">
       <ul id="member-nav-menu" class="nav navbar-nav navbar-right">
-        <li><a href="">로그인</a></li>
-        <li><a href="">회원가입</a></li>
-        <li><a href="">전체메뉴</a></li>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">전체메뉴</a></li>
         <li>
           <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -20,10 +25,10 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a href="#">Korea</a></li>
+              <li><a href="#">English</a></li>
+              <li><a href="#">China</a></li>
+              <li><a href="#">Japan</a></li>
             </ul>
           </div>
         </li>
@@ -35,20 +40,30 @@
               </button>  
             
           </form>
-          <!-- <a id="myLogin" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a> -->
         </li>
       </ul>
 
       <ul id="main-nav-menu" class="nav navbar-nav">
-        <li><a href="#">정부3.0정보관람</a></li>
-        <li><a href="#">전시</a></li>
-        <li><a href="#">과학교육</a></li>
-        <li><a href="#">문화/행사/캠프</a></li>
-        <li><a href="#">사이버과학관</a></li>
-        <li><a href="#">예약/신청</a></li>
-        <li><a href="#">고객지원</a></li>
-        <li><a href="#">커뮤니티</a></li>
-        <li><a href="#">과학관 소개</a></li>
+        <li class="outer-menu-item"><a href="#">정부3.0정보관람</a></li>
+        <li class="outer-menu-item">
+          <a href="#">전시</a>
+          <div class="inner-menu">
+            <img src="/assets/menu_bg.png" class="img-responsive">
+
+            <!-- <div>  
+              <span>본관</span>
+            </div> -->
+            
+            
+          </div>
+        </li>
+        <li class="outer-menu-item"><a href="#">과학교육</a></li>
+        <li class="outer-menu-item"><a href="#">문화/행사/캠프</a></li>
+        <li class="outer-menu-item"><a href="#">사이버과학관</a></li>
+        <li class="outer-menu-item"><a href="#">예약/신청</a></li>
+        <li class="outer-menu-item"><a href="#">고객지원</a></li>
+        <li class="outer-menu-item"><a href="#">커뮤니티</a></li>
+        <li class="outer-menu-item"><a href="#">과학관 소개</a></li>
       </ul>
     </div>
   </div>
@@ -61,20 +76,33 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-    <!-- Wrapper for slides -->
-    <div id="main-banner">
-      <div>
-        <img src="/assets/main_banner01.png" alt="Image" class="img-responsive">
-          <div class="carousel-caption">
+
+    <div id="main-banner" class="carousel-inner" role="listbox">
+      
+      <div class="item active ">
+        <img src="/assets/main_banner01.png" alt="국립과천과학관" class="img-responsive">
+        <div class="carousel-caption col-md-offset-5 col-md-3">
+          <div id="text">
             <h2>국립과천과학관</h2>
             <h3>사이버전시관 <small>개관</small></h3>
-            <p>온라인에서 친구들과 과천과학관에 방문 해보세요!</p>
-            <div>
-              사이버전시관 바로가기
-              <img src="/assets/arrow_white02.png" class="img-responsive">
-            </div>
+            <p>온라인에서 친구들과 과천과학관에 방문 해보세요!</p>  
           </div>
+          
+          <div id="box">
+            <a href="#">사이버전시관 바로가기</a>
+            <img src="/assets/arrow_white02.png" class="img-responsive">
+          </div>
+        </div>
       </div/> 
+<!-- 
+      <div class="item">
+        <img src="/assets/main_banner01.png" alt="그림" class="img-responsive">
+      </div>
+
+      <div class="item">
+        <img src="/assets/main_banner01.png" alt="그림" class="img-responsive">
+      </div> -->
+
     </div>
   </div>
 </div>
@@ -143,93 +171,118 @@
 <div id="main-content" class="container text-center">
   <div class="row">
     <!-- <div id="main-con"> -->
-      <div class="col-sm-4">
-        <img id="sub-banner" src="/assets/popupzone.png" class="img-responsive" style="width:100%" alt="Image">
-        <div id="sub-info1" class="strike">
-          <div id="left-box">
-            <h3>제56호</h3>
-            <h4>e소식지<small>2015.8</small></h4>
-          </div>
-          <div id="right-box">
-            <h5>발빠른 과천과학관 소식</h5>
-            <h6>보러가기 -></h6>
+    <div id="myCarousel" class="carousel slide col-sm-4" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img id="sub-banner" src="/assets/popupzone.png" class="img-responsive" style="width:100%" alt="Image">
+          <div class="carousel-caption">
+            <button type="button" class="btn btn-default btn-circle">
+             더보기
+            </button>
+            <button type="button" class="btn btn-default btn-circle">
+             예약
+            </button>
           </div>
         </div>
       </div>
-      <div class="col-sm-3">
-        <div class="well">
-          <div class='tabbable'>
-            <ul class='nav nav-tabs' id='tab'>
-              <li class='active'>
-                <a data-toggle='tab' href='#tab-content-1'>공지사항</a>
+
+      <div id="sub-info1">
+        <div id="left-box">
+          <h3>제56호</h3>
+          <h4>e소식지<small>2015.8</small></h4>
+        </div>
+        <div id="right-box">
+          <h5>발빠른 과천과학관 소식</h5>
+          <h6>보러가기 -></h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class='tab-content' id='tab-content'>
+        <div>
+          <ul class='nav nav-tabs' id='tab'>
+            <li class='active'>
+              <a data-toggle='tab' href='#tab-content-1'>공지사항</a>
+            </li>
+            <li>
+              <a data-toggle='tab' href='#tab-content-2'>보도자료</a>
+            </li>
+            <li>
+              <a data-toggle='tab' href='#tab-content-3'>체험 교육</a>
+            </li>
+          </ul>  
+        </div>
+        <div class='tab-pane fade in active' id='tab-content-1'>  
+          <div class="text-img">
+            <img src="/assets/notice.png">
+          </div>
+          
+          <div class="text-left">
+            <h2>가족뮤지컬 </h2>
+            <h1><오리지널 어린이 CAT></h1>
+            <h3>7.21(화)~8.23(일)</h3>
+            <p>화~수 11시 / </p>
+            <p>목~일 11시, 14</p>
+            <p>(단 8/8, 매주 월요일 휴관)</p>
+          </div>
+          
+          <div class="text-bm"> 
+            <ul>
+              <li>
+                <a href="#">
+                  <h1>국립과천과학관 전시물 활동서 배포 안내문</h1>
+                  <p>2015.6.30</p> 
+                </a>
               </li>
               <li>
-                <a data-toggle='tab' href='#tab-content-2'>보도자료</a>
+                <a href="#">
+                  <h1>제5회수학문화축전 수학체험프로그램 공모 </h1> 
+                  <p>2015.6.26</p>
+                </a>
               </li>
               <li>
-                <a data-toggle='tab' href='#tab-content-3'>체험 교육</a>
+                <a href="#">
+                  <h1>국립과천과학관 기간제근로자(비서) 채용 서류..</h1> 
+                  <p>2015.6.24</p>
+                </a>
               </li>
+              <li>
+                <a href="#">
+                  <h1>가족뮤지컬 <오리지널 어린이 CAT> 공연일자..</h1>
+                  <p>2015.5.06</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h1>[전시해설안내]'과학관 박사님이 들려주는 물..</h1>
+                  <p>2015.4.23</p>
+                </a>
+              </li>                    
             </ul>
-            <div class='tab-content' id='tab-content'>
-              <div class='tab-pane fade in active' id='tab-content-1'>     
-                <img src="/assets/notice.png">
-                
-                <div class="text-left">
-                  <h2>가족뮤지컬 </h2>
-                  <h1><오리지널 어린이 CAT></h1>
-                  <h3>7.21(화)~8.23(일)</h3>
-                  <p>화~수 11시 / </p>
-                  <p>목~일 11시, 14</p>
-                  <p>(단 8/8, 매주 월요일 휴관)</p>
-                </div>
-                
-                <div class="text-left"> 
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <p>국립과천과학관 전시물 활동서 배포 안내문<small>2015.6.30</small></p> 
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>제5회수학문화축전 수학체험프로그램 공모 <small>2015.6.26</small></p> 
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>국립과천과학관 기간제근로자(비서) 채용 서류..<small>2015.6.24</small></p> 
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>가족뮤지컬 <오리지널 어린이 CAT> 공연일자..<small>2015.5.06</small></p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>[전시해설안내]'과학관 박사님이 들려주는 물..<small>2015.4.23</small></p>
-                      </a>
-                    </li>                    
-                  </ul>
-                </div>               
-              </div>
+          </div>               
+        </div>
 
-              <div class='tab-pane fade' id='tab-content-2'>
-                <p class='no-mg-b'>Causae perpetua partiendo id vis, eu accusamus disputando pri, dolore prodesset in his. Cetero feugait atomorum mel te, ut mel dolore eleifend. Eu ius utroque deleniti lobortis, quo ea facete virtute consequat. Vix ad tale splendide, id quem dolorem delicata sea sea.</p>
-              </div>
-              <div class='tab-pane fade' id='tab-content-3'>
-                <p class='no-mg-b'>Eu magna mazim omnesque est, ignota lucilius ullamcorper ex usu. Cu sit altera vituperata, no sint conclusionemque has, altera nostro voluptatibus mei in. Nibh dicam ius ad, nusquam deleniti nominati ei quo. At eos prompta sententiae theophrastus, has ex dicant intellegat adipiscing.</p>
-              </div>
+        <div class='tab-pane fade' id='tab-content-2'>
+          <p class='no-mg-b'>Causae perpetua partiendo id vis, eu accusamus disputando pri, dolore prodesset in his. Cetero feugait atomorum mel te, ut mel dolore eleifend. Eu ius utroque deleniti lobortis, quo ea facete virtute consequat. Vix ad tale splendide, id quem dolorem delicata sea sea.</p>
+        </div>
+        <div class='tab-pane fade' id='tab-content-3'>
+          <p class='no-mg-b'>Eu magna mazim omnesque est, ignota lucilius ullamcorper ex usu. Cu sit altera vituperata, no sint conclusionemque has, altera nostro voluptatibus mei in. Nibh dicam ius ad, nusquam deleniti nominati ei quo. At eos prompta sententiae theophrastus, has ex dicant intellegat adipiscing.</p>
+        </div>
 
-              <div class="more">
-                <a href="#">더보기 +</a>
-              </div>
-            </div>
-          </div>
+        <div class="more">
+          <a href="#">더보기 +</a>
         </div>
       </div>
-    <!-- </div> -->
-    
+
+    </div>
+
     <div class="col-sm-4">
       <img id="calendar" src="/assets/calendar.png" style="width:100%" alt="Image">
       <div id="sub-info2">   
@@ -259,61 +312,51 @@
   </div>
 
   <div id="myTab" class='row'>
-    <div id="mainTab" class='col-sm-6'>
-      <div class='tabbable'>
-        <ul class='nav nav-tabs' id='tab'>
-          <li class='active'>
-            <a data-toggle='tab' href='#'>이달의 전시물</a>
-          </li>
-          <li>
-            <a data-toggle='tab' href='#'>진행중인 행사</a>
-          </li>
-          <li>
-            <a data-toggle='tab' href='#'>프로그램 소개 영상</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div id="subTab" class='col-sm-6'>
-      <div class='tabbable'>
-        <ul class='nav nav-tabs'>
-          <li class='active'>
-            <a data-toggle='tab' href='#'><img src="/assets/facebooklogo.png"></a>
-          </li>
-          <li>
-            <a data-toggle='tab' href='#'><img src="/assets/twitterlogo.jpg"></a>
-          </li>
-          <li>
-            <a data-toggle='tab' href='#'>Blog</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <ul class='nav nav-tabs' id="tab1">
+      <li class='active'>
+        <a data-toggle='tab' href='#'>이달의 전시물</a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#'>진행중인 행사</a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#'>프로그램 소개 영상</a>
+      </li>
+    </ul>
+  
+    <ul class='nav nav-tabs nav-justified' id="tab2">
+      <li class='active'>
+        <a data-toggle='tab' href='#'><img src="/assets/facebook1.png"></a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#'><img src="/assets/twitterlogo.jpg"></a>
+      </li>
+      <li>
+        <a data-toggle='tab' href='#'>Blog</a>
+      </li>
+    </ul>
   </div>  
 
   <div id="sub-low" class="row">
     <div class="col-sm-3 sub-con">
-      <img src="/assets/01.png" class="img-responsive" alt="Image">
+      <img src="/assets/01.png" class="img-responsive" alt="과학자가 바꾼 세상">
       <div id="">
         <h1>과학자가 바꾼 세상</h1>
-        <p>뉴턴과 아이슈타인의 과학적 발견이 우리가 사는</p>
-        <p>세상을 어떻게 변화시켰는지 알 수 있습니다.</p>
+        <p>뉴턴과 아이슈타인의 과학적 발견이 우리가 사는 세상을 어떻게 변화시켰는지 알 수 있습니다.</p>
       </div>
     </div>
     <div class="col-sm-3 sub-con">
-      <img src="/assets/02.png" class="img-responsive" alt="Image">
+      <img src="/assets/02.png" class="img-responsive" alt="달리는 기차안에서 공 던지기">
       <div id="">
         <h1>달리는 기차안에서 공 던지기</h1>
-        <p>정지한 기차 모형과 등속 운동하는 기차 모형에서 </p>
-        <p>수직으로 발사된 공의 움직임을 관찰해 보세요</p>
+        <p>정지한 기차 모형과 등속 운동하는 기차 모형에서 수직으로 발사된 공의 움직임을 관찰해 보세요</p>
       </div>
     </div>
     <div class="col-sm-3 sub-con">
-      <img src="/assets/03.png" class="img-responsive" alt="Image">
+      <img src="/assets/03.png" class="img-responsive" alt="수파실험장치">
       <div id="">
         <h1>수파실험장치</h1>
-        <p>푸른 물결이 출렁이는 수파실험장치를 통해 </p>
-        <p>쓰나미의 움직임을 살펴볼까요?</p>
+        <p>푸른 물결이 출렁이는 수파실험장치를 통해 쓰나미의 움직임을 살펴볼까요?</p>
       </div>
     </div>  
 
@@ -323,10 +366,66 @@
   </div>
 </div> <!-- "#main-content" End -->
 
+<!-- <nav id="quick-link1" data-role="slider" width="1200" height="80">
+  <a id="left-button" onclick="leftButton()">
+    <img src="/assets/arrow_grey01" class="arrow left img-responsive" alt="leftArrow"/>
+  </a>
+  
+  <div class="container">
+    <div class="item">
+      <a href="#">
+        <img src="/assets/familysite_01.png" alt="대한민국 청와대" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_02.png" alt="미래창조과학부" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_03.png" alt="국립중앙과학관" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_04.png" alt="국립서울과학관" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_05.png" alt="국립과천과학관 후원회 과학사랑희망키움" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_06.png" alt="한국저작권협회" class="img-responsive"/>
+      </a>  
+    </div>
+    
+    <div class="item">
+      <a href="#">
+        <img src="/assets/familysite_04.png" alt="국립서울과학관" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_05.png" alt="국립과천과학관 후원회 과학사랑희망키움" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_06.png" alt="한국저작권협회" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_01.png" alt="대한민국 청와대" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_02.png" alt="미래창조과학부" class="img-responsive"/>
+      </a>
+      <a href="#">
+        <img src="/assets/familysite_03.png" alt="국립중앙과학관" class="img-responsive"/>
+      </a>
+    </div>  
+  </div><!-- div.container....end -->
+
+  <a id="right-button" onclick="rightButton()">
+    <img class src="/assets/arrow_grey02" class="arrow right img-responsive" alt="rightArrow"/>
+  </a>
+  
+</nav> -->
+
+<!-- 
 <nav id="quick-link" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#" target="_blank">
+      <a class="navbar-brand" href="#" onclick="" target="_blank">
         <img src="/assets/arrow_grey01" class="arrow left img-responsive" alt="leftArros"/>
       </a>
       <a class="navbar-brand" href="#" target="_blank">
@@ -347,45 +446,12 @@
       <a class="navbar-brand" href="#" target="_blank">
         <img src="/assets/familysite_06.png" alt="한국저작권협회" class="img-responsive"/>
       </a>
-      <a class="navbar-brand" href="#" target="_blank">
+      <a class="navbar-brand" href="#" onclick="" target="_blank">
         <img class src="/assets/arrow_grey02" class="arrow right img-responsive" alt="rightArrow"/>
       </a>
     </div>
   </div>
-</nav>
-
-<!-- <div id="quick-link" >
-  <div class="container">
-    <div class="row">
-      <div>
-        <img src="/assets/arrow_grey01" class="arrow left" alt=""/>
-      </div>
-      <div style="padding: 0;"> 
-        <a href="#" target="_blank">
-          <img src="/assets/familysite_01.png" alt="대한민국 청와대" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="/assets/familysite_02.png" alt="미래창조과학부" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="/assets/familysite_03.png" alt="국립중앙과학관" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="/assets/familysite_04.png" alt="국립서울과학관" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="/assets/familysite_05.png" alt="국립과천과학관 후원회 과학사랑희망키움" />
-        </a>
-        <a href="#" target="_blank">
-          <img src="/assets/familysite_06.png" alt="한국저작권협회" />
-        </a>
-      </div>
-      <div>
-        <img class src="/assets/arrow_grey02" class="arrow right" alt=""/>
-      </div>
-    </div>
-  </div>
-</div> -->
+</nav> -->
 
 <nav id="quick-nav-items" class="navbar navbar-default">
   <div class="container-fluid">
